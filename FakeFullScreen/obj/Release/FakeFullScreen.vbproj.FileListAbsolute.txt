@@ -1,0 +1,8 @@
+c:\users\s4lsalsoft\documents\visual studio 2013\Projects\FakeFullScreen\FakeFullScreen\bin\Release\FakeFullScreen.dll
+c:\users\s4lsalsoft\documents\visual studio 2013\Projects\FakeFullScreen\FakeFullScreen\bin\Release\FakeFullScreen.pdb
+c:\users\s4lsalsoft\documents\visual studio 2013\Projects\FakeFullScreen\FakeFullScreen\bin\Release\FakeFullScreen.xml
+c:\users\s4lsalsoft\documents\visual studio 2013\Projects\FakeFullScreen\FakeFullScreen\obj\Release\FakeFullScreen.Resources.resources
+c:\users\s4lsalsoft\documents\visual studio 2013\Projects\FakeFullScreen\FakeFullScreen\obj\Release\FakeFullScreen.vbproj.GenerateResource.Cache
+c:\users\s4lsalsoft\documents\visual studio 2013\Projects\FakeFullScreen\FakeFullScreen\obj\Release\FakeFullScreen.dll
+c:\users\s4lsalsoft\documents\visual studio 2013\Projects\FakeFullScreen\FakeFullScreen\obj\Release\FakeFullScreen.xml
+c:\users\s4lsalsoft\documents\visual studio 2013\Projects\FakeFullScreen\FakeFullScreen\obj\Release\FakeFullScreen.pdb
