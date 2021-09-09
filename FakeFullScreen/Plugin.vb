@@ -1,36 +1,47 @@
-﻿Imports System.Runtime.InteropServices
+Imports System.Runtime.InteropServices
 
 Namespace Udrakoloader
 
     Public Class Plugin
 
-        Private Shared processGame As Process = Process.GetCurrentProcess()
-        Private Shared processName As String = processGame.ProcessName
+        Private Shared processGame As Process = Nothing
+        Private Shared processName As String = String.Empty
 
         Public Shared Function EntryPoint(ByVal pwzArgument As String) As Integer
+            processGame = Process.GetCurrentProcess()
+            processName = processGame.ProcessName
             Dim tskThread As New Task(ScriptAsyc, TaskCreationOptions.LongRunning)
             tskThread.Start()
             Return 0
         End Function
 
-
+        Public Shared Sub DIH_DLLMain(ByVal DIH_ProcessID As Integer)
+            processGame = Process.GetProcessById(DIH_ProcessID)
+            processName = processGame.ProcessName
+            Dim tskThread As New Task(ScriptAsyc, TaskCreationOptions.LongRunning)
+            tskThread.Start()
+        End Sub
+        
         Private Shared Procede As Boolean = False
 
         Private Shared ScriptAsyc As New Action(
    Sub()
 
-       For i As Integer = 0 To 2
+      For i As Integer = 0 To 2
+
            Dim placement = GetPlacement(processGame.MainWindowHandle)
            If placement.showCmd.ToString = "Normal" Then
                Dim FakeFullSc As Boolean = FullScreenEmulation(processName)
                Procede = True
            End If
+
            If Procede = True Then
                If placement.showCmd.ToString = "Maximized" Then
                    Dim FakeFullSc As Boolean = FullScreenEmulation(processName)
                    Exit For
                End If
            End If
+
            i -= 1
        Next
 
